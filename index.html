@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Daniel – Fotografie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Schlichte, moderne Schriftarten via Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet"
+  >
+
+  <style>
+    /* Reset grundlegender Browser-Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    }
+
+    /* Container-Fixbreite mit viel Weißraum */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 0;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* Navigation (nur Beispiel) */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #e91e63; /* Pink als dezenter Hover-Effekt */
+    }
+
+    /* Hero-Bereich */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      color: #555;
+    }
+
+    .btn {
+      background-color: #e91e63;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #d81b60;
+    }
+
+    /* Portfolio-Bereich */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    /* Pinke Platzhalter-Bilder */
+    .image-placeholder {
+      background-color: #e91e63;
+      aspect-ratio: 3/2; /* Seitenverhältnis für die Platzhalter */
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    /* About-Bereich */
+    .about {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .about p {
+      max-width: 700px;
+      font-weight: 300;
+      color: #555;
+    }
+
+    /* Kontakt-Bereich */
+    .contact {
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .contact input, 
+    .contact textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      outline: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact .btn {
+      margin-top: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #eee;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="container">
+    <h1>Daniel Fotografie</h1>
+    <nav>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Momente für die Ewigkeit</h2>
+    <p>
+      Willkommen auf meiner Fotografie-Website. Ich bin Daniel, ein leidenschaftlicher Fotograf, 
+      der es liebt, besondere Augenblicke in Bildern festzuhalten.
+    </p>
+    <button class="btn">Jetzt buchen</button>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio container" id="portfolio">
+    <!-- Beispielhaft mehrere Platzhalter-Bilder -->
+    <div class="image-placeholder">Bild 1</div>
+    <div class="image-placeholder">Bild 2</div>
+    <div class="image-placeholder">Bild 3</div>
+    <div class="image-placeholder">Bild 4</div>
+    <div class="image-placeholder">Bild 5</div>
+    <div class="image-placeholder">Bild 6</div>
+    <div class="image-placeholder">Bild 7</div>
+    <div class="image-placeholder">Bild 8</div>
+    <div class="image-placeholder">Bild 9</div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about container" id="about">
+    <h2>Über Daniel</h2>
+    <p>
+      Fotografieren ist für mich mehr als nur ein Beruf – es ist eine Leidenschaft. 
+      Ich liebe es, Geschichten mit meinen Fotos zu erzählen und dabei die Einzigartigkeit 
+      eines jeden Moments einzufangen. Jeder Mensch, jede Umgebung und jede Situation 
+      ist anders, was mich immer wieder aufs Neue begeistert.
+    </p>
+    <p>
+      Ob Hochzeiten, Porträts, Landschaftsaufnahmen oder Lifestyle-Fotoshootings – 
+      meine Kamera ist mein ständiger Begleiter. In meinen Bildern suche ich nach Emotionen, 
+      nach Details, die man sonst übersieht, und nach der Schönheit des Augenblicks.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact container" id="contact">
+    <h2>Kontakt</h2>
+    <p>Du möchtest mit mir zusammenarbeiten oder hast Fragen?</p>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Dein Name" required>
+      <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+      <textarea name="message" placeholder="Deine Nachricht" required></textarea>
+      <button class="btn" type="submit">Absenden</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 Daniel Fotografie. Alle Rechte vorbehalten.</p>
+  </footer>
+
+</body>
+</html>
